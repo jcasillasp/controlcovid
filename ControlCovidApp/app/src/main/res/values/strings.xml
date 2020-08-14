@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">ControlCovid</string>
+    <string name="title_activity_notas">Lista de Tareas</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Lista de Actividades</string>
+    <string name="title_notifications">Bitácora</string>
+    <string name="title_notes">Tareas</string>
+    <string name="title_favoritas">Actividades</string>
+    <string name="title_user_profile">Log</string>
+    <string name="action_add_nota">Nueva tarea</string>
+</resources>
