@@ -4,8 +4,8 @@ import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 
-@Entity(tableName = "notas")
-public class NotaEntity {
+@Entity(tableName = "tareas")
+public class TareaEntity {
     @PrimaryKey(autoGenerate = true)
     public int id;
 
@@ -14,7 +14,7 @@ public class NotaEntity {
     public boolean favorita;
     public String color;
 
-    public NotaEntity(String titulo, String contenido, boolean favorita, String color) {
+    public TareaEntity(String titulo, String contenido, boolean favorita, String color) {
         this.titulo = titulo;
         this.contenido = contenido;
         this.favorita = favorita;

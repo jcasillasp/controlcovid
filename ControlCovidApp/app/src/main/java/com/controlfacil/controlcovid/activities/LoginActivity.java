@@ -15,7 +15,7 @@ import com.controlfacil.controlcovid.R;
 import android.util.Patterns;
 import android.widget.Toast;
 
-public class MainActivity extends AppCompatActivity {
+public class LoginActivity extends AppCompatActivity {
     private SharedPreferences prefs;
 
     private EditText editTextEmail;
@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
                 String password = editTextPassword.getText().toString();
 
                 if (login(email, password)) {
-                    Intent i = new Intent(MainActivity.this, DashboardActivity.class);
+                    Intent i = new Intent(LoginActivity.this, TareasActivity.class);
                     startActivity(i);
                     saveOnPreferences(email, password);
                 }

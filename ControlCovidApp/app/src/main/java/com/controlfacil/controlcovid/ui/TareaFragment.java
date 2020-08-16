@@ -19,35 +19,35 @@ import android.view.View;
 import android.view.ViewGroup;
 
 ;
-import com.controlfacil.controlcovid.otherUI.NuevaNotaDialogFragment;
-import com.controlfacil.controlcovid.otherUI.NuevaNotaDialogViewModel;
+import com.controlfacil.controlcovid.db.entities.TareaEntity;
+import com.controlfacil.controlcovid.otherUI.NuevaTareaDialogFragment;
+import com.controlfacil.controlcovid.otherUI.NuevaTareaDialogViewModel;
 import com.controlfacil.controlcovid.R;
-import com.controlfacil.controlcovid.db.entities.NotaEntity;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class NotaFragment extends Fragment {
+public class TareaFragment extends Fragment {
 
     // TODO: Customize parameter argument names
     private static final String ARG_COLUMN_COUNT = "column-count";
     // TODO: Customize parameters
     private int mColumnCount = 2;
-    private List<NotaEntity> notaEntityList;
-    private MyNotaRecyclerViewAdapter adapterNotas;
-    private NuevaNotaDialogViewModel notaViewModel;
+    private List<TareaEntity> tareaEntityList;
+    private MyTareaRecyclerViewAdapter adapterNotas;
+    private NuevaTareaDialogViewModel notaViewModel;
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
      * fragment (e.g. upon screen orientation changes).
      */
-    public NotaFragment() {
+    public TareaFragment() {
     }
 
     // TODO: Customize parameter initialization
     @SuppressWarnings("unused")
-    public static NotaFragment newInstance(int columnCount) {
-        NotaFragment fragment = new NotaFragment();
+    public static TareaFragment newInstance(int columnCount) {
+        TareaFragment fragment = new TareaFragment();
         Bundle args = new Bundle();
         args.putInt(ARG_COLUMN_COUNT, columnCount);
         fragment.setArguments(args);
@@ -84,9 +84,9 @@ public class NotaFragment extends Fragment {
                 recyclerView.setLayoutManager(new StaggeredGridLayoutManager(numeroColumnas, StaggeredGridLayoutManager.VERTICAL));
             }
 
-            notaEntityList = new ArrayList<>();
+            tareaEntityList = new ArrayList<>();
 
-            adapterNotas = new MyNotaRecyclerViewAdapter(notaEntityList, getActivity());
+            adapterNotas = new MyTareaRecyclerViewAdapter(tareaEntityList, getActivity());
             recyclerView.setAdapter(adapterNotas);
 
             lanzarViewModel();
@@ -96,10 +96,10 @@ public class NotaFragment extends Fragment {
 
     private void lanzarViewModel() {
         notaViewModel = ViewModelProviders.of(getActivity())
-                .get(NuevaNotaDialogViewModel.class);
-        notaViewModel.getAllNotas().observe(getActivity(), new Observer<List<NotaEntity>>() {
+                .get(NuevaTareaDialogViewModel.class);
+        notaViewModel.getAllNotas().observe(getActivity(), new Observer<List<TareaEntity>>() {
             @Override
-            public void onChanged(@Nullable List<NotaEntity> notaEntities) {
+            public void onChanged(@Nullable List<TareaEntity> notaEntities) {
                 adapterNotas.setNuevasNotas(notaEntities);
             }
         });
@@ -123,7 +123,7 @@ public class NotaFragment extends Fragment {
 
     private void mostrarDialogoNuevaNota() {
         FragmentManager fm = getActivity().getSupportFragmentManager();
-        NuevaNotaDialogFragment dialogNuevaNota = new NuevaNotaDialogFragment();
+        NuevaTareaDialogFragment dialogNuevaNota = new NuevaTareaDialogFragment();
         dialogNuevaNota.show(fm, "NuevaNotaDialogFragment");
     }
 }

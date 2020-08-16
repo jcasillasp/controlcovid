@@ -8,9 +8,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.controlfacil.controlcovid.R;
-import com.controlfacil.controlcovid.ui.NotaFragment;
+import com.controlfacil.controlcovid.ui.TareaFragment;
 
-public class DashboardActivity extends AppCompatActivity {
+public class TareasActivity extends AppCompatActivity {
 
     private BottomNavigationView.OnNavigationItemSelectedListener mOnNavigationItemSelectedListener
             = new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -22,7 +22,7 @@ public class DashboardActivity extends AppCompatActivity {
 
             switch (item.getItemId()) {
                 case R.id.navigation_home:
-                    f = new NotaFragment();
+                    f = new TareaFragment();
                     return true;
                 case R.id.navigation_dashboard:
                     return true;
@@ -50,7 +50,7 @@ public class DashboardActivity extends AppCompatActivity {
 
         getSupportFragmentManager()
                 .beginTransaction()
-                .add(R.id.contenedor, new NotaFragment())
+                .add(R.id.contenedor, new TareaFragment())
                 .commit();
     }
 

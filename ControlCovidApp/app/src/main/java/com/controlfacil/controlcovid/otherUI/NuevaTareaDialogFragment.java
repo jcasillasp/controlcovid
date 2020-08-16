@@ -13,12 +13,12 @@ import android.widget.RadioGroup;
 import android.widget.Switch;
 
 import com.controlfacil.controlcovid.R;
-import com.controlfacil.controlcovid.db.entities.NotaEntity;
+import com.controlfacil.controlcovid.db.entities.TareaEntity;
 
-public class NuevaNotaDialogFragment extends DialogFragment {
+public class NuevaTareaDialogFragment extends DialogFragment {
 
-    public static NuevaNotaDialogFragment newInstance() {
-        return new NuevaNotaDialogFragment();
+    public static NuevaTareaDialogFragment newInstance() {
+        return new NuevaTareaDialogFragment();
     }
     private View view;
     private EditText etTitulo, etContenido;
@@ -48,8 +48,8 @@ public class NuevaNotaDialogFragment extends DialogFragment {
                         boolean esFavorita = swNotaFavorita.isChecked();
 
                         // Comunicar al ViewModel el nuevo dato.
-                        NuevaNotaDialogViewModel mViewModel = ViewModelProviders.of(getActivity()).get(NuevaNotaDialogViewModel.class);
-                        mViewModel.insertarNota(new NotaEntity(titulo, contenido, esFavorita, color));
+                        NuevaTareaDialogViewModel mViewModel = ViewModelProviders.of(getActivity()).get(NuevaTareaDialogViewModel.class);
+                        mViewModel.insertarNota(new TareaEntity(titulo, contenido, esFavorita, color));
                         dialog.dismiss();
 
                     }

@@ -10,24 +10,23 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.controlfacil.controlcovid.otherUI.NuevaNotaDialogFragment;
 import com.controlfacil.controlcovid.R;
-import com.controlfacil.controlcovid.db.entities.NotaEntity;
-import com.controlfacil.controlcovid.otherUI.NuevaNotaDialogViewModel;
+import com.controlfacil.controlcovid.db.entities.TareaEntity;
+import com.controlfacil.controlcovid.otherUI.NuevaTareaDialogViewModel;
 
 
 import java.util.List;
 
-public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecyclerViewAdapter.ViewHolder> {
+public class MyTareaRecyclerViewAdapter extends RecyclerView.Adapter<MyTareaRecyclerViewAdapter.ViewHolder> {
 
-    private List<NotaEntity> mValues;
+    private List<TareaEntity> mValues;
     private Context ctx;
-    private NuevaNotaDialogViewModel viewModel;
+    private NuevaTareaDialogViewModel viewModel;
 
-    public MyNotaRecyclerViewAdapter(List<NotaEntity> items, Context ctx) {
+    public MyTareaRecyclerViewAdapter(List<TareaEntity> items, Context ctx) {
         mValues = items;
         this.ctx = ctx;
-        viewModel = ViewModelProviders.of((AppCompatActivity)ctx).get(NuevaNotaDialogViewModel.class);
+        viewModel = ViewModelProviders.of((AppCompatActivity)ctx).get(NuevaTareaDialogViewModel.class);
     }
 
     @Override
@@ -68,7 +67,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
         return mValues.size();
     }
 
-    public void setNuevasNotas(List<NotaEntity> nuevasNotas) {
+    public void setNuevasNotas(List<TareaEntity> nuevasNotas) {
         this.mValues = nuevasNotas;
         notifyDataSetChanged();
     }
@@ -78,7 +77,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
         public final TextView tvTitulo;
         public final TextView tvContenido;
         public final ImageView ivFavorita;
-        public NotaEntity mItem;
+        public TareaEntity mItem;
 
         public ViewHolder(View view) {
             super(view);
