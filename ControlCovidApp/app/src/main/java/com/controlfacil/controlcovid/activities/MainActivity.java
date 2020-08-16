@@ -1,4 +1,4 @@
-package com.androidavanzado.prueba.ui;
+package com.controlfacil.controlcovid.activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,8 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 
-import com.androidavanzado.prueba.R;
-import android.text.TextUtils;
+import com.controlfacil.controlcovid.R;
+
 import android.util.Patterns;
 import android.widget.Toast;
 

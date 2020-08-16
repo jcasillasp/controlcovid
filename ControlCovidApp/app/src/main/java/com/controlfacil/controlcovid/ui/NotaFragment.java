@@ -1,7 +1,6 @@
-package com.androidavanzado.prueba.ui;
+package com.controlfacil.controlcovid.ui;
 
 import android.arch.lifecycle.Observer;
-import android.arch.lifecycle.ViewModelProvider;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.os.Bundle;
@@ -19,10 +18,11 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.androidavanzado.prueba.NuevaNotaDialogFragment;
-import com.androidavanzado.prueba.NuevaNotaDialogViewModel;
-import com.androidavanzado.prueba.R;
-import com.androidavanzado.prueba.db.entity.NotaEntity;
+;
+import com.controlfacil.controlcovid.otherUI.NuevaNotaDialogFragment;
+import com.controlfacil.controlcovid.otherUI.NuevaNotaDialogViewModel;
+import com.controlfacil.controlcovid.R;
+import com.controlfacil.controlcovid.db.entities.NotaEntity;
 
 import java.util.ArrayList;
 import java.util.List;

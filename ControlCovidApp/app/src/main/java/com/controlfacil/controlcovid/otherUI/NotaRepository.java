@@ -1,12 +1,12 @@
-package com.androidavanzado.prueba;
+package com.controlfacil.controlcovid.otherUI;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
 
-import com.androidavanzado.prueba.db.NotaRoomDatabase;
-import com.androidavanzado.prueba.db.dao.NotaDao;
-import com.androidavanzado.prueba.db.entity.NotaEntity;
+import com.controlfacil.controlcovid.db.dao.NotaDao;
+import com.controlfacil.controlcovid.db.database.NotaRoomDatabase;
+import com.controlfacil.controlcovid.db.entities.NotaEntity;
 
 import java.util.List;
 

@@ -1,11 +1,10 @@
-package com.androidavanzado.prueba;
+package com.controlfacil.controlcovid.otherUI;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
-import android.arch.lifecycle.ViewModel;
 
-import com.androidavanzado.prueba.db.entity.NotaEntity;
+import com.controlfacil.controlcovid.db.entities.NotaEntity;
 
 import java.util.List;
 

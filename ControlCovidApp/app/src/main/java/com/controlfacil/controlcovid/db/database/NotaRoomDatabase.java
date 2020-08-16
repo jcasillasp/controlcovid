@@ -1,12 +1,12 @@
-package com.androidavanzado.prueba.db;
+package com.controlfacil.controlcovid.db.database;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import com.androidavanzado.prueba.db.dao.NotaDao;
-import com.androidavanzado.prueba.db.entity.NotaEntity;
+import com.controlfacil.controlcovid.db.dao.NotaDao;
+import com.controlfacil.controlcovid.db.entities.NotaEntity;
 
 @Database(entities = {NotaEntity.class}, version = 1)
 public abstract class NotaRoomDatabase extends RoomDatabase {

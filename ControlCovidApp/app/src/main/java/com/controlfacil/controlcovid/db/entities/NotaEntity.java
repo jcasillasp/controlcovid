@@ -1,4 +1,4 @@
-package com.androidavanzado.prueba.db.entity;
+package com.controlfacil.controlcovid.db.entities;
 
 import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;

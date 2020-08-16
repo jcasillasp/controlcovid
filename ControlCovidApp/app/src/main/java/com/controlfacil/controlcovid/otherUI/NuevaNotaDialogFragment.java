@@ -1,21 +1,19 @@
-package com.androidavanzado.prueba;
+package com.controlfacil.controlcovid.otherUI;
 
 import android.app.Dialog;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.DialogInterface;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
 import android.support.v4.app.DialogFragment;
 import android.support.v7.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.RadioGroup;
 import android.widget.Switch;
 
-import com.androidavanzado.prueba.db.entity.NotaEntity;
+import com.controlfacil.controlcovid.R;
+import com.controlfacil.controlcovid.db.entities.NotaEntity;
 
 public class NuevaNotaDialogFragment extends DialogFragment {
 

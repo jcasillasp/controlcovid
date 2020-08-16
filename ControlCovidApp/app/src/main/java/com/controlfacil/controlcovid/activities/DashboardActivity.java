@@ -1,4 +1,4 @@
-package com.androidavanzado.prueba.ui;
+package com.controlfacil.controlcovid.activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,7 +7,8 @@ import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
-import com.androidavanzado.prueba.R;
+import com.controlfacil.controlcovid.R;
+import com.controlfacil.controlcovid.ui.NotaFragment;
 
 public class DashboardActivity extends AppCompatActivity {
 

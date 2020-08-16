@@ -1,6 +1,5 @@
-package com.androidavanzado.prueba.ui;
+package com.controlfacil.controlcovid.ui;
 
-import android.app.Activity;
 import android.arch.lifecycle.ViewModelProviders;
 import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
@@ -11,9 +10,11 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.androidavanzado.prueba.NuevaNotaDialogViewModel;
-import com.androidavanzado.prueba.db.entity.NotaEntity;
-import com.androidavanzado.prueba.R;
+import com.controlfacil.controlcovid.otherUI.NuevaNotaDialogFragment;
+import com.controlfacil.controlcovid.R;
+import com.controlfacil.controlcovid.db.entities.NotaEntity;
+import com.controlfacil.controlcovid.otherUI.NuevaNotaDialogViewModel;
+
 
 import java.util.List;
 
@@ -21,7 +22,7 @@ public class MyNotaRecyclerViewAdapter extends RecyclerView.Adapter<MyNotaRecycl
 
     private List<NotaEntity> mValues;
     private Context ctx;
-    NuevaNotaDialogViewModel viewModel;
+    private NuevaNotaDialogViewModel viewModel;
 
     public MyNotaRecyclerViewAdapter(List<NotaEntity> items, Context ctx) {
         mValues = items;
