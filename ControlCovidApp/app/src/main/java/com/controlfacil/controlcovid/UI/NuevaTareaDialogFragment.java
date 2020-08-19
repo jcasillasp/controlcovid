@@ -1,4 +1,4 @@
-package com.controlfacil.controlcovid.otherUI;
+package com.controlfacil.controlcovid.UI;
 
 import android.app.Dialog;
 import android.arch.lifecycle.ViewModelProviders;
@@ -13,7 +13,7 @@ import android.widget.RadioGroup;
 import android.widget.Switch;
 
 import com.controlfacil.controlcovid.R;
-import com.controlfacil.controlcovid.db.entities.TareaEntity;
+import com.controlfacil.controlcovid.Databases.Entities.TareaEntity;
 
 public class NuevaTareaDialogFragment extends DialogFragment {
 

@@ -1,10 +1,11 @@
-package com.controlfacil.controlcovid.otherUI;
+package com.controlfacil.controlcovid.UI;
 
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
 
-import com.controlfacil.controlcovid.db.entities.TareaEntity;
+import com.controlfacil.controlcovid.Databases.LocalDatabases.TareaRepository;
+import com.controlfacil.controlcovid.Databases.Entities.TareaEntity;
 
 import java.util.List;
 

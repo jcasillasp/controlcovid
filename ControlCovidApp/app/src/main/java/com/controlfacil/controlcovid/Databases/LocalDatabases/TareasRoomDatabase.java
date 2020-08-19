@@ -1,12 +1,12 @@
-package com.controlfacil.controlcovid.db.database;
+package com.controlfacil.controlcovid.Databases.LocalDatabases;
 
 import android.arch.persistence.room.Database;
 import android.arch.persistence.room.Room;
 import android.arch.persistence.room.RoomDatabase;
 import android.content.Context;
 
-import com.controlfacil.controlcovid.db.dao.TareaDao;
-import com.controlfacil.controlcovid.db.entities.TareaEntity;
+import com.controlfacil.controlcovid.Databases.DAO.TareaDao;
+import com.controlfacil.controlcovid.Databases.Entities.TareaEntity;
 
 @Database(entities = {TareaEntity.class}, version = 1)
 public abstract class TareasRoomDatabase extends RoomDatabase {

@@ -1,6 +1,5 @@
-package com.controlfacil.controlcovid.db.entities;
+package com.controlfacil.controlcovid.Databases.Entities;
 
-import android.arch.persistence.room.ColumnInfo;
 import android.arch.persistence.room.Entity;
 import android.arch.persistence.room.PrimaryKey;
 

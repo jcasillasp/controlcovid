@@ -1,4 +1,4 @@
-package com.controlfacil.controlcovid.activities;
+package com.controlfacil.controlcovid.Activities;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -11,6 +11,7 @@ import android.widget.EditText;
 import android.widget.Switch;
 
 import com.controlfacil.controlcovid.R;
+import com.controlfacil.controlcovid.Models.Tarea;
 
 import android.util.Patterns;
 import android.widget.Toast;
@@ -39,6 +40,10 @@ public class LoginActivity extends AppCompatActivity {
         bindUI();
         prefs = getSharedPreferences("Preferences", this.MODE_PRIVATE);
         setCredentialsIfExist();
+
+        Tarea rawDBR = new Tarea();
+
+        rawDBR.cargaJasonTest();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override

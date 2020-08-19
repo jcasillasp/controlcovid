@@ -1,4 +1,4 @@
-package com.controlfacil.controlcovid.db.dao;
+package com.controlfacil.controlcovid.Databases.DAO;
 
 import android.arch.lifecycle.LiveData;
 import android.arch.persistence.room.Dao;
@@ -6,7 +6,7 @@ import android.arch.persistence.room.Insert;
 import android.arch.persistence.room.Query;
 import android.arch.persistence.room.Update;
 
-import com.controlfacil.controlcovid.db.entities.TareaEntity;
+import com.controlfacil.controlcovid.Databases.Entities.TareaEntity;
 
 
 import java.util.List;
@@ -14,10 +14,10 @@ import java.util.List;
 @Dao
 public interface TareaDao {
     @Insert
-    void insert(TareaEntity nota);
+    void insert(TareaEntity tarea);
 
     @Update
-    void update(TareaEntity nota);
+    void update(TareaEntity tarea);
 
     @Query("DELETE FROM tareas")
     void deleteAll();

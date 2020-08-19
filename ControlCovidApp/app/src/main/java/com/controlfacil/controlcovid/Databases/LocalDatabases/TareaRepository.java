@@ -1,12 +1,11 @@
-package com.controlfacil.controlcovid.otherUI;
+package com.controlfacil.controlcovid.Databases.LocalDatabases;
 
 import android.app.Application;
 import android.arch.lifecycle.LiveData;
 import android.os.AsyncTask;
 
-import com.controlfacil.controlcovid.db.dao.TareaDao;
-import com.controlfacil.controlcovid.db.database.TareasRoomDatabase;
-import com.controlfacil.controlcovid.db.entities.TareaEntity;
+import com.controlfacil.controlcovid.Databases.DAO.TareaDao;
+import com.controlfacil.controlcovid.Databases.Entities.TareaEntity;
 
 import java.util.List;
 

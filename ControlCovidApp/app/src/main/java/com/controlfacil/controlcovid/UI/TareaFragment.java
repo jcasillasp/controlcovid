@@ -1,4 +1,4 @@
-package com.controlfacil.controlcovid.ui;
+package com.controlfacil.controlcovid.UI;
 
 import android.arch.lifecycle.Observer;
 import android.arch.lifecycle.ViewModelProviders;
@@ -19,9 +19,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 ;
-import com.controlfacil.controlcovid.db.entities.TareaEntity;
-import com.controlfacil.controlcovid.otherUI.NuevaTareaDialogFragment;
-import com.controlfacil.controlcovid.otherUI.NuevaTareaDialogViewModel;
+import com.controlfacil.controlcovid.Databases.Entities.TareaEntity;
 import com.controlfacil.controlcovid.R;
 
 import java.util.ArrayList;

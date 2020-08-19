@@ -1,4 +1,4 @@
-package com.controlfacil.controlcovid.activities;
+package com.controlfacil.controlcovid.Activities;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,7 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
 
 import com.controlfacil.controlcovid.R;
-import com.controlfacil.controlcovid.ui.TareaFragment;
+import com.controlfacil.controlcovid.UI.TareaFragment;
 
 public class TareasActivity extends AppCompatActivity {
 
@@ -53,5 +53,4 @@ public class TareasActivity extends AppCompatActivity {
                 .add(R.id.contenedor, new TareaFragment())
                 .commit();
     }
-
 }
