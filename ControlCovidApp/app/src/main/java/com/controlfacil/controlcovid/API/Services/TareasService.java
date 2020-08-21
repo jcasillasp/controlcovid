@@ -7,8 +7,9 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
+import retrofit2.http.Query;
 
-public interface TareaService {
+public interface TareasService {
     @GET("tareas_usuario_detalle")
-    Call<List<Tarea>> listRepos(@Path("id_persona") String user);
+    Call<List<Tarea>> getTareasAll(@Query("campos") String cuales);
 }

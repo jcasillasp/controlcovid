@@ -10,11 +10,19 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Switch;
 
+import com.controlfacil.controlcovid.API.Services.TareasService;
+import com.controlfacil.controlcovid.API.TareasAPI;
 import com.controlfacil.controlcovid.R;
 import com.controlfacil.controlcovid.Models.Tarea;
 
 import android.util.Patterns;
 import android.widget.Toast;
+
+import java.util.List;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivity extends AppCompatActivity {
     private SharedPreferences prefs;
@@ -28,7 +36,6 @@ public class LoginActivity extends AppCompatActivity {
     private Switch switchRemember;
     private Button btnLogin;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +48,7 @@ public class LoginActivity extends AppCompatActivity {
         prefs = getSharedPreferences("Preferences", this.MODE_PRIVATE);
         setCredentialsIfExist();
 
-        Tarea rawDBR = new Tarea();
-
-        rawDBR.cargaJasonTest();
+        loadTareasFromAPI();
 
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -122,6 +127,36 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean isValidPassword(String password) {
         return password.length() >= 4;
+    }
+
+    private String loadTareasFromAPI() {
+        String outputString;
+        List<Tarea> lasTareas;
+        Call<List<Tarea>> tareaCall;
+        Tarea unaTarea;
+
+        TareasService service = TareasAPI.getApi().create(TareasService.class);
+
+            tareaCall = service.getTareasAll("todos");
+            tareaCall.enqueue(new Callback<List <Tarea>>() {
+                @Override
+                public void onResponse(Call<Tarea> call, Response<Tarea> response) {
+                    Tarea unaTarea = response.body();
+                    setResult(unaTarea);
+                }
+
+                @Override
+                public void onFailure(Call<Tarea> call, Throwable t) {
+                    Toast.makeText(LoginActivity.this, "Error", Toast.LENGTH_LONG).show();
+                }
+            });
+    }
+
+    private void setResult(Tarea unaTarea) {
+ //       textViewcity.setText(city.getName() + ", " + city.getCountry());
+ //       textViewDescription.setText(city.getDescription());
+ //       textViewTemp.setText(city.getTemperature() + "ºC");
+ //       Picasso.with(this).load(API.BASE_ICONS + city.getIcon() + API.EXTENSION_ICONS).into(img);
     }
 
 }

@@ -171,12 +171,10 @@ public class Tarea {
         this.nombreRole = nombreRole;
     }
 
-    public void cargaJasonTest () {
-        String jsonExample = null;
-        // jsonExample= getTareas();
-
+    public Tarea cargaJasonTest (String jsonExample) {
         Gson gson = new GsonBuilder().create();
         Tarea miTarea = gson.fromJson(jsonExample, Tarea.class);
+        return miTarea;
     }
   }
 
